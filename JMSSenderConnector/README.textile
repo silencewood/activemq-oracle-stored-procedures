@@ -1,9 +1,9 @@
 
 A set of stored procedures for publishing JMS messages to a ActiveMQ broker from an Oracle DB with Java installed.
 
-
-1. edit the file 1-permissions.sql and replace the values for <variables> and execute it as DBA.
-2. edit the file 2-load-into-oracle.sql and replace the values for <variables> and execute it as DBA.
+0. copy the files activemq-all-clean-5.10.0.jar & JMSSenderConnector.jar somewhere in the file system of your oracle database, this folder is named here  "JMSSenderConnectorLibsFolder"
+1. edit the file 1-permissions.sql and replace the values for <variables> (eg <JMSSenderConnectorLibsFolder>) and execute it as DBA.
+2. edit the file 2-load-into-oracle.sql and replace the values for <variables> (eg <JMSSenderConnectorLibsFolder>) and execute it as DBA.
 3. execute the file 3-package.sql as DBA.
 
 and that’s it!
