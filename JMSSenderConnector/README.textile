@@ -1,0 +1,20 @@
+
+A set of stored procedures for publishing JMS messages to a ActiveMQ broker from an Oracle DB with Java installed.
+
+
+1. edit the file 1-permissions.sql and replace the values for <variables> and execute it as DBA.
+2. edit the file 2-load-into-oracle.sql and replace the values for <variables> and execute it as DBA.
+3. execute the file 3-package.sql as DBA.
+
+and that’s it!
+
+
+try it like this :
+
+DECLARE
+  timestart NUMBER;
+BEGIN
+  timestart:=dbms_utility.get_time();
+  JMS_UTILS.SEND_TO_QUEUE_PR('heyyyyyyyyyy-' || to_char(systimestamp, 'HH24:mm:ss,FF3'));
+  dbms_output.put_line('duration:' || (dbms_utility.get_time()-timestart));
+END;

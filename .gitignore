@@ -1,0 +1,4 @@
+/JMSSenderConnector/*.project
+*.classpath
+/JMSSenderConnector/.settings
+/JMSSenderConnector/*.gitignore
