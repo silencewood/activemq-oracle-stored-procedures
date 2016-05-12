@@ -9,6 +9,9 @@ A set of stored procedures for publishing JMS messages to a ActiveMQ broker from
 and that’s it!
 
 
+Tested on Oracle 12c, java 1.6.0_71
+
+
 try it like this :
 
 DECLARE
