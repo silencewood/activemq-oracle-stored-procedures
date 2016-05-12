@@ -20,5 +20,5 @@ JMS_UTILS.SEND_TO_QUEUE_PR(‘heyyyyyyyyyy-’ || to_char(systimestamp, ‘HH24:
 dbms_output.put_line(‘duration:’ || (dbms_utility.get_time()-timestart));
 END;
 
-Please let me know if all things are ok et if there is a bug!
+Please let me know if all things are ok and if there is a bug!
 bennour.hassen@gmail.com
