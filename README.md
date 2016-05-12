@@ -14,12 +14,12 @@ Version used of ActivMQ Server : Apache-activemq-5.13.1
 
 try it like this :
 
-DECLARE 
-timestart NUMBER; 
-BEGIN 
-timestart:=dbms_utility.get_time(); 
-JMS_UTILS.SEND_TO_QUEUE_PR('heyyyyyyyyyy-' || TO_CHAR(systimestamp, 'HH24:mm:ss,FF3'), 'org.apache.activemq.jndi.ActiveMQInitialContextFactory','tcp://localhost:61616', 'topic','myTopicTest', 'activemqUser' , 'activemqPwd'); 
-dbms_output.put_line(‘duration:’ || (dbms_utility.get_time()-timestart)); 
-END;
+DECLARE   
+    timestart NUMBER;   
+BEGIN   
+    timestart:=dbms_utility.get_time();    
+    JMS_UTILS.SEND_TO_QUEUE_PR('heyyyyyyyyyy-' || TO_CHAR(systimestamp, 'HH24:mm:ss,FF3'),    'org.apache.activemq.jndi.ActiveMQInitialContextFactory','tcp://localhost:61616', 'topic','myTopicTest', 'activemqUser' , 'activemqPwd');    
+    dbms_output.put_line(‘duration:’ || (dbms_utility.get_time()-timestart));    
+END;  
 
 Please let me know if all things are ok and if there is a bug! bennour.hassen@gmail.com
